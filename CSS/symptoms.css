@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+main {
+  width: 100%;
+}
+
+.main_cover {
+  width: 100%;
+  height: 60vh;
+  background-image: url("/Pictures/index_main2.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -2;
+}
+
+.main_text {
+  width: calc(100% - 10%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main_text h2 {
+  color: white;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1000px) {
+  .main_cover {
+    background-image: url("/Pictures/index_main.jpg");
+  }
+}
+
+
+/*========================
+Second Section
+========================*/
+.stages {
+  min-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 228, 228);
+  padding: 20px 5px;
+}
+
+.stages_title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.stage_progress_details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  width: 7em;
+  aspect-ratio: 1;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.number p {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.stage_title {
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(43, 165, 202);
+}
+
+.stage_duration {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.next_stage {
+  width: 100%;
+  height: 8em;
+  position: relative;
+}
+
+.arrow_line {
+  position: absolute;
+  top: 0;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%);
+  border-right: 5px solid black;
+}
+
+.arrow {
+  position: absolute;
+  left: 43.5%;
+  bottom: -5%;
+  border: solid black;
+  border-width: 0 7px 7px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 780px) {
+  .stages_container {
+    width: 100%;
+  }
+
+  .stages_two_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+  }
+
+  .stage_pogress {
+    position: relative;
+  }
+
+  .stage_progress_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .stage_progress_descr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stages_two_container .stage_pogress:first-child {
+    display: flex;
+    margin-top: -9rem;
+  }
+
+  .stages_two_container .stage_pogress:first-child .next_stage {
+    position: absolute;
+    right: -15rem;
+    width: 10em;
+  }
+
+  .stages_two_container .stage_pogress:first-child .next_stage .arrow_line {
+    transform: rotate(90deg);
+    left: 2.7em;
+  }
+
+  .stages_two_container .stage_pogress:first-child .next_stage .arrow {
+    transform: rotate(-45deg);
+    bottom: 3.05em;
+    left: 55%;
+  }
+
+  .stages_two_container .stage_pogress:last-child .next_stage .arrow_line {
+    left: 0;
+    transform: rotate(35deg)
+  }
+  .stages_two_container .stage_pogress:last-child .next_stage .arrow {
+    left: -2.7em;
+    bottom: 0;
+    transform: rotate(90deg);
+  }
+
+  .stages_two_container .margin-top {
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .stages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stages_container {
+    max-width: 80rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  
+  .stages_two_container .stage_pogress:first-child {
+    margin-top: 0;
+  }
+
+  .stages_two_container .stage_pogress:last-child {
+    display: flex;
+  }
+
+  .stages_two_container .stage_pogress:last-child .next_stage {
+    left: 2em;
+  }
+
+  .stages_two_container .stage_pogress:last-child .stage_progress_details .stage_progress_descr p:first-child {
+    min-width: 6em;
+    text-align: center;
+  }
+
+  .stages_two_container .stage_pogress:last-child .next_stage .arrow_line {
+    left: 2.5em;
+    transform: rotate(90deg)
+  }
+
+  .stages_two_container .stage_pogress:last-child .next_stage .arrow {
+    left: 5.5em;
+    bottom: 3.1em;
+    transform: rotate(-45deg);
+  }
+
+  .stages_container div:last-child {
+    margin-top: 0;
+  }
+
+}
+
+/*==============================
+Third Section
+==============================*/
+
+.third_section {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.three_stages_details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.first_third_stage,
+.second_stage_details {
+  max-width: 25em;
+}
+
+.first_third_stage img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.second_stage_details img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.stage_details {
+  padding: 0 1.2rem;
+}
+
+.stage_details_title {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.stage_details ul {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .first_third_stage {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 60em;
+    align-items: center;
+  }
+
+  .first_third_stage img {
+    max-width: 25em;
+  }
+
+  .first_third_stage .stage_details .stage_details_title {
+    text-align: left;
+  }
+
+  .second_stage_details {
+    max-width: 60em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+
+  .second_stage_details img {
+    max-width: 25em;
+    order: 1;
+  }
+
+  .second_stage_details .stage_details .stage_details_title {
+    text-align: left;;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .three_stages_details .first_third_stage:last-child {
+    min-width: 60em;
+  }
+}
