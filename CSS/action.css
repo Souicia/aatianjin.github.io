@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+main {
+  width: 100%;
+}
+
+.main_cover {
+  width: 100%;
+  height: 60vh;
+  background-image: url("/Pictures/index_main2.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -2;
+}
+
+.main_text {
+  width: calc(100% - 10%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main_text h2 {
+  color: white;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.section_title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .main_cover {
+    background-image: url("/Pictures/index_main.jpg");
+  }
+}
+
+/*=====================
+Second Section
+=====================*/
+
+.second_section {
+  width: 100%;
+  background-color: rgb(211, 246, 243);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevention_container {
+  max-width: 60rem;
+}
+
+.first_third_prevention,
+.second_prevention {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first_third_prevention img,
+.second_prevention img{
+  max-width: 30rem;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+
+.prevention_text {
+  margin-bottom: 1.5rem;
+  max-width: 30rem;
+}
+
+.prevention_text ol {
+  list-style-position: inside;
+}
+
+@media screen and (min-width: 780px) {
+  .first_third_prevention,
+  .second_prevention {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .second_prevention img {
+    order: 1;
+  }
+}
+
+/*=====================
+Third Section
+=====================*/
+
+.third_section {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.detection_container {
+  max-width: 60rem;
+  text-align: center;
+}
+
+.detection_container ul {
+  list-style-position: inside;
+}
+
+@media screen and (min-width: 780px) {
+  .third_section,
+  .detection_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .detection_container ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+  }
+}
+
+/*=====================
+Fourth Section
+=====================*/
+
+.fourth_section {
+  width: 100%;
+  background-color: rgb(228, 228, 228);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth_section_title {
+  margin-bottom: 2rem;
+}
+
+.fourth_section_title .section_title {
+  margin-bottom: 0.2rem
+}
+
+.fourth_section_title p {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.signs_container {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sign_pic_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sign_pic_text {
+  margin-bottom: 2rem;
+}
+
+.sign_pic_text img,
+.sign_pic_text p {
+  max-width: 10rem;
+}
+
+.sign_pic_text p {
+  text-align: center;
+  max-width: 12rem;
+}
